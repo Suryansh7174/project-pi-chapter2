@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Project π — Chapter 2: The Shadow Hallway</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="stylesheet" href="chapter2.css">
+</head>
+<body>
+  <!-- ambient layers -->
+  <div id="particles"></div>
+  <div class="vignette"></div>
+  <div class="scanlines"></div>
+
+  <main class="stage">
+    <header class="title-wrap">
+      <h1 class="glitch" data-text="CHAPTER 2 — THE SHADOW HALLWAY">CHAPTER 2 — THE SHADOW HALLWAY</h1>
+      <p class="sub">Corridors whisper. Patterns repeat. The rift breathes in the dark.</p>
+    </header>
+
+    <section id="intro" class="card intro-card">
+      <p class="intro-text">After the board's strange glow, the corridor outside the classroom changed. Footsteps echoed where no one walked and numbers appeared as shadows on the walls. Move carefully — the hallway remembers.</p>
+      <button id="beginBtn" class="btn primary">Enter the Hallway</button>
+    </section>
+
+    <section id="quiz" class="card hidden">
+      <div id="questionArea"></div>
+      <div class="controls">
+        <button id="submitBtn" class="btn primary">Submit Answers</button>
+        <button id="resetBtn" class="btn ghost">Reset</button>
+      </div>
+      <p id="scoreText" class="score"></p>
+    </section>
+
+    <section id="fact" class="card hidden fact-card">
+      <h2>🔓 Hallway Insight Unlocked</h2>
+      <p id="factText"></p>
+      <div class="fact-note">Keep this insight — it connects Chapter 1 and Chapter 3.</div>
+      <a id="nextLink" class="btn next" href="../chapter3/chapter3.html" style="display:none">➡ Proceed to Chapter 3</a>
+    </section>
+
+    <footer class="footer">
+      <div class="small">Project: π — Chapter 2</div>
+    </footer>
+  </main>
+
+  <script src="chapter2.js"></script>
+</body>
+</html>
