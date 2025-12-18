@@ -1,49 +1,100 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <title>Project π — Chapter 2: The Shadow Hallway</title>
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <link rel="stylesheet" href="chapter2.css">
-</head>
-<body>
-  <!-- ambient layers -->
-  <div id="particles"></div>
-  <div class="vignette"></div>
-  <div class="scanlines"></div>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PROJECT π | The Shadow of the Base</title>
 
-  <main class="stage">
-    <header class="title-wrap">
-      <h1 class="glitch" data-text="CHAPTER 2 — THE SHADOW HALLWAY">CHAPTER 2 — THE SHADOW HALLWAY</h1>
-      <p class="sub">Corridors whisper. Patterns repeat. The rift breathes in the dark.</p>
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Roboto+Mono&display=swap" rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="chapter2.css">
+</head>
+
+<body>
+
+<div class="chamber-container">
+
+    <!-- HEADER -->
+    <header class="chamber-header">
+        <h1 class="chamber-title">
+            PROJECT <span class="math-symbol">π</span>
+        </h1>
+        <p class="chamber-subtitle">
+            Sutra Integrity Check • Nikhilam (Base 100)
+        </p>
     </header>
 
-    <section id="intro" class="card intro-card">
-      <p class="intro-text">After the board's strange glow, the corridor outside the classroom changed. Footsteps echoed where no one walked and numbers appeared as shadows on the walls. Move carefully — the hallway remembers.</p>
-      <button id="beginBtn" class="btn primary">Enter the Hallway</button>
+    <!-- STORY CONTEXT -->
+    <section class="context-panel">
+        <p class="log-message error-log">
+            WARNING: Numerical imbalance detected.
+        </p>
+        <p class="log-detail">
+            The Shadow can only be removed by decomposing the numbers using the Nikhilam Sutra.
+            Since the base is 100, the right part must contain exactly two digits.
+        </p>
     </section>
 
-    <section id="quiz" class="card hidden">
-      <div id="questionArea"></div>
-      <div class="controls">
-        <button id="submitBtn" class="btn primary">Submit Answers</button>
-        <button id="resetBtn" class="btn ghost">Reset</button>
-      </div>
-      <p id="scoreText" class="score"></p>
+    <!-- PUZZLE CHAMBER -->
+    <section class="decomposition-panel">
+
+        <h2 class="trial-title">FINAL TRIAL: 105 × 107</h2>
+
+        <div class="calculation-grid">
+
+            <div class="grid-row">
+                <span>Deviation of 105 from base 100:</span>
+                <input type="number" id="devA" placeholder="+5" required>
+            </div>
+
+            <div class="grid-row">
+                <span>Deviation of 107 from base 100:</span>
+                <input type="number" id="devB" placeholder="+7" required>
+            </div>
+
+            <div class="decomposition-line"></div>
+
+            <div class="grid-row result-row">
+                <div class="result-part">
+                    <label>Left Part (Cross Addition)</label>
+                    <input type="number" id="leftPart" placeholder="112" required>
+                </div>
+
+                <div class="result-part">
+                    <label>Right Part (Tail Product)</label>
+                    <input type="number" id="rightPart" placeholder="35" required>
+                </div>
+            </div>
+
+        </div>
+
+        <p class="final-answer-prompt">FINAL ANSWER</p>
+        <input type="number" id="finalAnswer" class="final-input" placeholder="11235" required>
+
+        <button class="cyber-button" onclick="checkPuzzle()">
+            INJECT SUTRA SOLUTION
+        </button>
+
+        <p id="puzzleMessage" class="log-message">
+            Awaiting correct decomposition...
+        </p>
+
     </section>
 
-    <section id="fact" class="card hidden fact-card">
-      <h2>🔓 Hallway Insight Unlocked</h2>
-      <p id="factText"></p>
-      <div class="fact-note">Keep this insight — it connects Chapter 1 and Chapter 3.</div>
-      <a id="nextLink" class="btn next" href="../chapter3/chapter3.html" style="display:none">➡ Proceed to Chapter 3</a>
+    <!-- SUCCESS PANEL -->
+    <section id="successPanel" class="context-panel hidden">
+        <p class="log-message success-log">
+            SUTRA VERIFIED. SHADOW DISSIPATED.
+        </p>
+        <p class="riddle-hint">
+            NEXT: The Maze of the Cross (Vertically & Crosswise)
+        </p>
     </section>
 
-    <footer class="footer">
-      <div class="small">Project: π — Chapter 2</div>
-    </footer>
-  </main>
+</div>
 
-  <script src="chapter2.js"></script>
+<script src="chapter2.js"></script>
 </body>
 </html>
